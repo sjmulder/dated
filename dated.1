@@ -1,0 +1,48 @@
+.Dd November 7, 2018
+.Dt DATED 1
+.Os
+.Sh NAME
+.Nm dated
+.Nd add a timestamp to every line of a stream
+.Sh SYNOPSIS
+.Nm
+.Op Fl f Ar format
+.Sh DESCRIPTION
+.Nm
+copies standard input to standard output,
+prepending the date and time to every line.
+.Pp
+The
+.Fl f
+option changes the prefix format string to
+.Ar format ,
+which is passed to
+.Xr strftime 3 .
+The default is
+.Qq "%x %X " :
+the local date notation, a space, the local time notation, and another space.
+.Sh EXAMPLES
+Watch a file with
+.Xr tail 1
+and see when lines were added:
+.Bd -literal -offset indent
+$ tail -F test.txt | dated
+11/07/18 21:28:31 Hello
+11/07/18 21:28:40 World!
+.Ed
+.Pp
+Change the output format:
+.Bd -literal -offset indent
+$ tail -F test.txt | dated -f "[%H:%M] "
+[21:32] Hello
+[21:33] World!
+.Ed
+.Sh SEE ALSO
+.Xr date 1 ,
+.Xr strftime 3
+.Sh AUTHORS
+.An Sijmen J. Mulder
+.Aq Mt ik@sjmulder.nl
+.Sh BUGS
+There is no way to get subsecond precision, a limitation of
+.Xr strftime 3 .
