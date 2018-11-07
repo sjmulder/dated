@@ -40,12 +40,16 @@ Change the output format:
 Running
 -------
 
-Should work on an Unix, including Linux and macOS. To compile:
+Should work on any Unix, including Linux and macOS.
+
+Mac users can install from
+[my Homebrew tap](https://github.com/sjmulder/homebrew-tap)
+
+    brew install sjmulder/tap/dated
+
+To compile, install and uninstal from source:
 
     make
-
-To install and uninstall:
-
     make install   [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
     make uninstall [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
 
