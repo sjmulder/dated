@@ -33,7 +33,7 @@ int
 main(int argc, char **argv)
 {
 	int c;
-	char *format = "%x %X.%M ";
+	char *format = "%x %X ";
 	fd_set fds;
 	int flags;
 	time_t now;
