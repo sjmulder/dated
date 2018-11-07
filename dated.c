@@ -43,6 +43,10 @@ main(int argc, char **argv)
 	ssize_t nread, i;
 	int newline = 1;
 
+#if defined(__OpenBSD)
+	pledge("stdio", NULL);
+#endif
+
 	while ((c = getopt(argc, argv, "f:")) != -1) {
 		switch (c) {
 		case 'f':
