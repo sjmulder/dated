@@ -1,14 +1,11 @@
 dated
 =====
-
 Add a timestamp to every line of a stream:
 
 ... | **dated** [**-f** *format*]
 
-
 Description
 -----------
-
 **dated** copies standard input to standard output, prepending the date and
 time to every line.
 
@@ -19,10 +16,8 @@ the local date notation, a space, the local time notation, and another space.
 Note: there is no way to get subsecond precision, a limitation of
 [strftime(3)](http://man.openbsd.org/strftime.3).
 
-
 Examples
 --------
-
 Watch a file with [tail(1)](http://man.openbsd.org/tail.1) and see when lines
 were added:
 
@@ -36,10 +31,8 @@ Change the output format:
     [21:32] Hello
     [21:33] World!
 
-
 Running
 -------
-
 Should work on any Unix, including Linux and macOS.
 
 Mac users can install from
@@ -52,7 +45,6 @@ To compile, install and uninstal from source:
     make
     make install   [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
     make uninstall [DESTDIR=] [PREFIX=/usr/local] [MANPREFIX=PREFIX/man]
-
 
 Authors
 -------
