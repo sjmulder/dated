@@ -1,0 +1,5 @@
+image: debian/stable
+sources:
+ - https://github.com/sjmulder/dated
+tasks:
+ - build: cd dated && make all check

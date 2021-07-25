@@ -1,5 +1,9 @@
 dated
 =====
+[![Build status](
+ https://builds.sr.ht/~sjmulder/dated.svg)](
+ https://builds.sr.ht/~sjmulder/dated)
+
 Add a timestamp to every line of a stream:
 
 ... | **dated** [**-f** *format*]
