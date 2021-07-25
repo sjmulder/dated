@@ -1,5 +1,5 @@
-TBD
----
+1.0.3 (2021-07-25)
+------------------
  - New: 'make check' target.
  - Fix: explicit permissions in 'make install', prevents man page from
    being executable on certain environments.
