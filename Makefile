@@ -11,8 +11,8 @@ clean:
 
 install: dated
 	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(MANPREFIX)/man1
-	install dated $(DESTDIR)$(PREFIX)/bin/
-	install dated.1 $(DESTDIR)$(MANPREFIX)/man1/
+	install -m755 dated $(DESTDIR)$(PREFIX)/bin/
+	install -m644 dated.1 $(DESTDIR)$(MANPREFIX)/man1/
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dated
