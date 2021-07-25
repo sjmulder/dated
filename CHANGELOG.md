@@ -1,3 +1,10 @@
+TBD
+---
+ - New: 'make check' target.
+ - Fix: explicit permissions in 'make install', prevents man page from
+   being executable on certain environments.
+ - Change: switch from Travis CI to builds.sr.ht.
+
 1.0.2 (2019-09-05)
 ------------------
  - Relicensed to 2-clause BSD.
