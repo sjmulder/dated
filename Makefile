@@ -9,6 +9,9 @@ all: dated
 clean:
 	rm -f dated
 
+check: dated
+	ls | ./dated >/dev/null
+
 install: dated
 	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(MANPREFIX)/man1
 	install -m755 dated $(DESTDIR)$(PREFIX)/bin/
